@@ -12,7 +12,7 @@ Your task as the DevOps engineer:
 **Deploy this app on Kubernetes** so that it is always running, portable, and can be scaled later.
 Simulate this  using the popular `nginx` container image (think of it as Zepto’s storefront web app).
 
-## Exercise 1: Kuvernetes Getting Started
+## Exercise 1: Kubernetes Getting Started
 
 **Goal:** Run your first app inside Kubernetes and access it.
 
