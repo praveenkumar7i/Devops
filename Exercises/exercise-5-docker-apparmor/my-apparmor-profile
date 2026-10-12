@@ -1,0 +1,17 @@
+#include <tunables/global>
+
+profile my-apparmor-profile flags=(attach_disconnected) {
+    network inet stream,
+
+    /usr/** r,
+    /lib/** r,
+    /lib64/** r,
+    /etc/ld.so.cache r,
+
+    /app/** rw,
+
+    deny /etc/passwd r,
+    deny /bin/sh x,
+    deny /bin/dash x,
+    deny capability sys_admin,
+}
