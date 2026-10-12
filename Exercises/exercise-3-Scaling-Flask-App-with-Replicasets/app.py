@@ -2,7 +2,7 @@ from flask import Flask, request
 import socket
 import time
 import random
-
+# Initialize the Flask application
 app = Flask(__name__)
 
 
