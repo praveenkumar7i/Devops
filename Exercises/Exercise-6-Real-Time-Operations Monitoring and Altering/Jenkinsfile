@@ -1,0 +1,54 @@
+﻿
+pipeline {
+    agent any
+
+    stages {
+        stage('Check Workspace Files') {
+            steps {
+                echo 'Checking project files...'
+                sh '''
+                    test -f delivery_metrics.py
+                    test -f Dockerfile
+                    test -f requirements.txt
+                    echo "All required files are present."
+                '''
+            }
+        }
+
+        stage('Build Delivery App Image') {
+            steps {
+                echo 'Building the delivery monitoring Docker image...'
+                sh 'docker build -t delivery-monitoring-app .'
+            }
+        }
+
+        stage('Check Python Syntax') {
+            steps {
+                echo 'Checking Python syntax inside the built image...'
+                sh '''
+                    docker run --rm \
+                      --entrypoint python \
+                      delivery-monitoring-app \
+                      -m py_compile /app/delivery_metrics.py
+                '''
+            }
+        }
+
+        stage('Verify Docker Image') {
+            steps {
+                sh 'docker image inspect delivery-monitoring-app'
+                echo 'Docker image verified successfully.'
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'SUCCESS: All delivery monitoring pipeline stages passed!'
+        }
+
+        failure {
+            echo 'FAILED: Check the Console Output for the failed stage.'
+        }
+    }
+}
