@@ -77,50 +77,34 @@ Configure Prometheus as Grafana's data source, then create dashboard panels for:
 For the Prometheus data-source URL, use the address that is reachable **from the Grafana container**. In a Docker Compose setup where the services share a network, this is typically `http://prometheus:9090`.
 
 ### Screenshots
+## Screenshots
 
-The screenshot references below are retained from the original exercise documentation. Keep the `Images` directory and its filenames unchanged so these images continue to display.
+### 1. Prometheus Main Page
+![Prometheus Main Page](Images/prometheus-main-page.png)
 
-![Prometheus Main Page](../Images/prometheus-main-page.png "Prometheus Main Page")
+### 2. Prometheus Targets
+![Prometheus Targets](Images/prometheus-Targets.png)
 
-**Prometheus targets**
+### 3. Prometheus Targets Running
+![Prometheus Targets Running](Images/prometheus-Targets-Running.png)
 
-![Prometheus Targets Page](../Images/prometheus-Targets-Running.png "Prometheus Targets Page")
+### 4. Prometheus Alerts
+![Prometheus Alerts](Images/prometheus-Alerts.png)
 
-**Grafana login**
+### 5. Grafana Login Page
+![Grafana Login Page](Images/grafana-login-page.png)
 
-<table>
-  <tr>
-    <td><img src="../Images/grafana-login-page.png" alt="Grafana Login Page" width="800"></td>
-    <td><img src="../Images/grafana-login-change-pwd-skip.png" alt="Grafana Login Password Update Skip" width="800"></td>
-  </tr>
-</table>
+### 6. Grafana Login Password Update
+![Grafana Login Password Update](Images/grafana-login-change-pwd-skip.png)
 
-**Add Prometheus as a Grafana data source**
+### 7. Grafana Add Prometheus Data Source
+![Grafana Add Prometheus Data Source](Images/grafana-add-prometheus-data-source.png)
 
-<table>
-  <tr>
-    <td><img src="../Images/grafana-add-prometheus-data-source.png" alt="Grafana Add Prometheus Data Source" width="800"></td>
-    <td><img src="../Images/grafana-add-prometheus-ip-address.png" alt="Grafana Prometheus Data Source Address" width="800"></td>
-  </tr>
-</table>
+### 8. Grafana Prometheus IP Address
+![Grafana Prometheus IP Address](Images/grafana-add-prometheus-ip-address.png)
 
-**Prometheus targets and alerts**
-
-<table>
-  <tr>
-    <td><img src="../Images/prometheus-Targets.png" alt="Prometheus Targets" width="800"></td>
-    <td><img src="../Images/prometheus-Alerts.png" alt="Prometheus Alerts Page" width="800"></td>
-  </tr>
-</table>
-
-**Grafana delivery-monitoring dashboard**
-
-<table>
-  <tr>
-    <td><img src="../Images/grafana-dellivery-monitoirng-dashboard.png" alt="Grafana Delivery Monitoring Dashboard" width="800"></td>
-  </tr>
-</table>
-
+### 9. Grafana Delivery Monitoring Dashboard
+![Grafana Delivery Monitoring Dashboard](Images/grafana-dellivery-monitoirng-dashboard.png)
 ## Jenkins Pipeline
 
 The `Jenkinsfile` automates the following checks:
