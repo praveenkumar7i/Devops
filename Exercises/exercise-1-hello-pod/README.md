@@ -11,11 +11,13 @@ using Minikube, and expose it so it's reachable from outside the cluster.
 4. Exposed the Pod via a NodePort Service: `kubectl expose pod hello-k8s --type=NodePort --port=80`
 5. Accessed it in-browser: `minikube service hello-k8s`
 
+
 ## Exercise Video
 
 Watch the Exercise 1 demonstration:
 
-https://github.com/user-attachments/assets/PASTE-YOUR-ATTACHMENT-ID-HERE
+https://github.com/user-attachments/assets/24818ca5-f311-48a6-8763-386f0ee6fa26
+
 
 ## What I learned
 - A Pod is the smallest deployable unit — it wraps the container and gets a cluster-internal IP.
