@@ -126,7 +126,7 @@ The Kubernetes Service forwards incoming requests to the Flask application runni
 A successful request returns:
 
 ```text
-Hello from Flask on Kubernetes!
+Hello hi from Flask on Kubernetes!
 ```
 
 ## Result
