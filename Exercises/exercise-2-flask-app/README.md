@@ -103,6 +103,15 @@ Replace `<PORT>` with the actual port in the returned URL.
 
 The NodePort is assigned by Kubernetes and may differ between environments. Use the URL returned by `minikube service flask-app-service --url` rather than assuming a fixed port.
 
+### Important Configuration
+
+| Component | Configuration |
+|---|---|
+| Service type | `NodePort` |
+| Container image | `flask-app:latest` |
+
+The Kubernetes Service forwards incoming requests to the Flask application running inside the Pod.
+
 ## Key Concepts
 
 - **Docker Image:** Packages the application, Python runtime, and required dependencies.
